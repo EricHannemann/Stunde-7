@@ -21,7 +21,8 @@ namespace Stunde_7
                 Console.WriteLine("1: Zeichen ersetzen.");
                 Console.WriteLine("2: Vokale entfernen.");
                 Console.WriteLine("3: Quersumme berechnen");
-                Console.WriteLine("4: Beenden.");
+                Console.WriteLine("4: auf Kleinbuchstaben prüfen");
+                Console.WriteLine("5: Beenden.");
 
                 auswahl = Convert.ToInt32(Console.ReadLine());
 
@@ -111,6 +112,36 @@ namespace Stunde_7
                         break;
 
                     case 4:
+                        Console.WriteLine("Ein String wird auf Kleinbuchstaben untersucht");
+                        Console.WriteLine("Bitte eine Zeichenkette eingeben:");
+                        string eingabe = Console.ReadLine();
+                        string ausgabe = "";
+
+                        for (int i = 0; i < eingabe.Length; i++)
+                        {
+                            if (char.IsLower(eingabe[i]))
+                            {
+                                
+                                Console.WriteLine(ausgabe += eingabe[i]);
+                            }
+
+                        }
+                        int länge = ausgabe.Length;
+
+                        if (länge > 0)
+                        {
+                            Console.WriteLine("Es gibt " + länge + " Kleinbuchstaben.");
+                            Console.WriteLine("Die Kleinbuchstaben dieser Zeichenkette sind: " + ausgabe);
+                        }
+
+                        else
+                        {
+                            Console.WriteLine("Es gibt keine Kleinbuchstaben.");
+                        }
+
+                        break;
+
+                    case 5:
                         Console.WriteLine("Programm wird beendet");
                         break;
 
