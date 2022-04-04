@@ -11,7 +11,8 @@ namespace Stunde_7
         static void Main(string[] args)
         {
             Console.WriteLine("Stunde 7");
-
+            // QUERSUMME RECHNEN
+            
             string wiederholen;
             do
             {
@@ -93,15 +94,18 @@ namespace Stunde_7
                     case 3:
 
                         Console.WriteLine("Die Quersumme einer ganzen Zahl soll berechnet werden.");
-                        Console.WriteLine("Geben Sie eine Zahl ein:");
-                        string zahl;
+                        Console.WriteLine("Geben Sie eine ganze Zahl ein:");
+                        string zahl = Console.ReadLine();
                         int quersumme = 0;
-                        zahl = Console.ReadLine();
 
                         for (int i = 0; i < zahl.Length; i++)
                         {
-                            Console.WriteLine(quersumme += Convert.ToInt32(zahl[i]));   ///////////////////////////////////////////////////
+                            Console.WriteLine(quersumme =  quersumme + Convert.ToInt32(zahl[i].ToString()));
+                                //gleich als: quersumme += Convert.ToInt32(zahl[i].ToString());
+
                         }
+
+                        Console.WriteLine("Die Quersumme von " + zahl + " ist: " + quersumme);
                         Console.WriteLine(quersumme);
 
                         break;
